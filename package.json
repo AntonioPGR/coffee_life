@@ -1,0 +1,26 @@
+{
+  "name": "coffee_life",
+  "version": "1.0.0",
+  "description": "a website for those who love coffee",
+  "main": "pages/index.tsx",
+  "repository": "https://www.github.com/AntonioPGR/coffee_life",
+  "author": "Antonio Pacheco Gerim Ribeiro <antoninhopgr@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.7",
+    "@types/react": "^18.2.21",
+    "typescript": "5.2.2"
+  }
+}
