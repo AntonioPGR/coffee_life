@@ -3,8 +3,6 @@ import PageContent from "src/components/PageContent";
 import Footer from "src/patterns/Footer";
 import Header from "src/patterns/Header";
 import Providers from "src/providers";
-import GlobalStyles from "themes/global_style";
-import StyledComponentsRegistry from "./registry";
 
 export default function RootLayout({ children }: PropsChildren) {
 	return (
@@ -23,15 +21,12 @@ export default function RootLayout({ children }: PropsChildren) {
 					rel='stylesheet'
 				></link>
 			</head>
-			<body>
+			<body suppressHydrationWarning={true}>
 				<Providers>
-					<GlobalStyles />
 					<PageContent>
-						<StyledComponentsRegistry>
-							<Header />
-							{children}
-							<Footer />
-						</StyledComponentsRegistry>
+						<Header />
+						{children}
+						<Footer />
 					</PageContent>
 				</Providers>
 			</body>

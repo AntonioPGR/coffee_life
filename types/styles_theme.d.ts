@@ -5,6 +5,7 @@ declare interface ISizes{
   lg: string,
   slg?: string,
   md: string,
+  smd?:string
   sm: string,
 }
 
@@ -64,5 +65,6 @@ declare module 'styled-components' {
     space: ISpaces,
     text_size: ITextSizes
     typography: ITypography
+    size: ISizes
   }
 }

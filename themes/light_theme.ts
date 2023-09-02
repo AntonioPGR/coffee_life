@@ -56,6 +56,14 @@ const LightTheme: DefaultTheme = {
     text: "'Lustria', serif;",
     title: "'Urbanist', sans-serif;",
     hero: "'Kurale', serif;",
+  },
+  size: {
+    sm: "1rem",
+    smd: "1.5rem",
+    md: "2rem",
+    slg: "3rem",
+    lg: "4rem",
+    xlg: "5rem"
   }
 }
 

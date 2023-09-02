@@ -9,8 +9,11 @@ const StyledPageContent = styled.main`
 		const { screen_size } = props.theme;
 
 		return `
-    max-width: ${screen_size.lg};
-    margin: auto;
-  `;
+			max-width: ${screen_size.lg};
+			min-height: 100vh;
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+			margin: auto;
+  	`;
 	}}
 `;

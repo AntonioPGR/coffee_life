@@ -4,6 +4,13 @@ export const flex_center = `
   justify-content: center;
 `
 
+export const flex_column_center = `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 export const flex_between = `
   display: flex;
   align-items: center;

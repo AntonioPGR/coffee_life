@@ -2,7 +2,6 @@ import IconsMenu from "src/components/IconsMenu";
 import Logo from "src/components/Logo";
 import NavMenu from "src/components/NavMenu";
 import { styled } from "styled-components";
-import { flex_between } from "themes/default_styles";
 
 export default function Header() {
 	return (
