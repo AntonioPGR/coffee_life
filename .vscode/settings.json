@@ -6,7 +6,32 @@
 		"**/CVS": true,
 		"**/.DS_Store": true,
 		"**/Thumbs.db": true,
-		"*.pdf": true
+		"*.pdf": true,
+		".vscode": true,
+		"tailwind.config.ts": true,
+		"README.md": true,
+		"postcss.config.js": true,
+		"package-lock.json": true,
+		"next-env.d.ts": true,
+		".eslintrc.json": true,
+		".gitignore": true,
+		"node_modules": true,
+		".next": true,
+		"tsconfig.json": true,
+		"package.json": true
 	},
-	"hide-files.files": []
+	"hide-files.files": [
+		".vscode",
+		"tailwind.config.ts",
+		"README.md",
+		"postcss.config.js",
+		"package-lock.json",
+		"next-env.d.ts",
+		".eslintrc.json",
+		".gitignore",
+		"node_modules",
+		".next",
+		"tsconfig.json",
+		"package.json"
+	]
 }
