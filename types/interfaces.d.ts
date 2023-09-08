@@ -16,5 +16,10 @@ declare interface IProduct{
   description: string,
   sizes: IProductSize[]
   extras: string[],
-  img: string
+  img: IImage
+}
+
+declare interface IImage{
+  src: string,
+  alt: string
 }
