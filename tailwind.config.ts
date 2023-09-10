@@ -21,7 +21,7 @@ const config: Config = {
       hero: ['Kurale', 'handwrite'],
       text: ['Lustria', 'serif'],
       button: ['Urbanist', 'sans-serif']
-    }
+    },
   },
   plugins: [],
 }

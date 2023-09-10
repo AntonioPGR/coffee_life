@@ -1,14 +1,19 @@
+"use client";
+
 interface PropsProductExtras {
 	extra_options: string[];
 }
 
 export default function ExtraOptions({ extra_options }: PropsProductExtras) {
 	return (
-		<section>
-			<p>Extras:</p>
-			<ul>
+		<section className='flex flex-col gap-2'>
+			<p className='text-3xl'>Extras:</p>
+			<ul className='ml-4'>
 				{extra_options.map(extra => (
-					<li key={extra}>{extra}</li>
+					<li key={extra} className='flex gap-2'>
+						<input type='checkbox' name={extra.toLowerCase()} id={extra} />
+						<label htmlFor={extra.toLocaleLowerCase()}>{extra}</label>
+					</li>
 				))}
 			</ul>
 		</section>

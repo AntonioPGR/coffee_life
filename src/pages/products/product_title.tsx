@@ -11,9 +11,9 @@ export default function ProductTitle({
 }: PropsProductTitle) {
 	return (
 		<>
-			<hgroup>
-				<h2>{normal_name}</h2>
-				<h1>{special_name}</h1>
+			<hgroup className='w-full'>
+				<h2 className='font-text text-4xl'>{normal_name}</h2>
+				<h1 className='font-hero text-7xl '>{special_name}</h1>
 			</hgroup>
 			<p>{description}</p>
 		</>
