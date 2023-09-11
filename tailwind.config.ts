@@ -8,8 +8,10 @@ const config: Config = {
     colors: {
       bg: {
         100: '#FAF9F3',
+        "200-transparent": '#bf8c80BB',
         500: '#8C5042',
         800: '#592C28',
+        
       },
       text: {
         100: '#FAF9F3',

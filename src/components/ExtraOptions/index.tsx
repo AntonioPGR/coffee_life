@@ -11,7 +11,12 @@ export default function ExtraOptions({ extra_options }: PropsProductExtras) {
 			<ul className='ml-4'>
 				{extra_options.map(extra => (
 					<li key={extra} className='flex gap-2'>
-						<input type='checkbox' name={extra.toLowerCase()} id={extra} />
+						<input
+							type='checkbox'
+							className='accent-bg-800'
+							name={extra.toLowerCase()}
+							id={extra}
+						/>
 						<label htmlFor={extra.toLocaleLowerCase()}>{extra}</label>
 					</li>
 				))}
