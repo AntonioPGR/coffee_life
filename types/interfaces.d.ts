@@ -23,3 +23,9 @@ declare interface IImage{
   src: string,
   alt: string
 }
+
+declare interface IPropsDefaultComponents{
+  className?: string
+  onClick?: () => void,
+  onChange?: () => void
+}

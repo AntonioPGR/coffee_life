@@ -1,7 +1,7 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-interface PropsCarousel extends PropsChildren {
+interface PropsCarousel extends PropsChildren, IPropsDefaultComponents {
 	number_of_slides: number;
 	start_slide: number;
 }
@@ -10,55 +10,66 @@ export default function Carousel({
 	children,
 	number_of_slides,
 	start_slide,
+	className,
 }: PropsCarousel) {
-	const [current_slide, setCurrentSlide] = useState(start_slide);
+	const [current_slide_number, setCurrentSlideNumber] = useState(start_slide);
 	const carousel_html = useRef<HTMLDivElement>(null);
 
-	const increaseSlideNumber = () => {
-		if (!carousel_html.current) {
-			return;
+	useEffect(() => {
+		const carousel = carousel_html.current;
+		if (carousel) {
+			const carousel_width = carousel.offsetWidth;
+			carousel.scrollLeft = carousel_width * current_slide_number;
 		}
-		if (current_slide !== number_of_slides - 1) {
-			const carousel_width = carousel_html.current.offsetWidth;
-			const new_current_slide = current_slide + 1;
-			carousel_html.current.scrollLeft = carousel_width * new_current_slide;
-			setCurrentSlide(new_current_slide);
-		}
-	};
+	}, [current_slide_number]);
 
-	const decreaseSlideNumber = () => {
-		if (!carousel_html.current) {
-			return;
+	function decreaseSlideNumber() {
+		const new_slide_number = current_slide_number - 1;
+		if (new_slide_number >= 0) {
+			setCurrentSlideNumber(new_slide_number);
 		}
-		if (current_slide !== 0) {
-			const carousel_width = carousel_html.current.offsetWidth;
-			const new_current_slide = current_slide - 1;
-			carousel_html.current.scrollLeft = carousel_width * new_current_slide;
-			setCurrentSlide(new_current_slide);
-		}
-	};
+	}
 
-	const renderColumnsStyle = () => {
-		let string = "100%";
-		const slides = number_of_slides - 1;
-		for (let i = 0; i < slides; i++) {
-			string += "_100%";
+	function increaseSlideNumber() {
+		const new_slide_number = current_slide_number + 1;
+		if (new_slide_number < number_of_slides) {
+			setCurrentSlideNumber(new_slide_number);
 		}
-		return string;
-	};
+	}
 
 	return (
-		<div className='grid grid-cols-[auto_1fr_auto] items-center w-full h-full'>
-			<div onClick={decreaseSlideNumber}>
+		<div
+			className={
+				"grid grid-cols-[auto_1fr_auto] items-center w-full h-full" + className
+			}
+		>
+			<div
+				onClick={decreaseSlideNumber}
+				className={
+					current_slide_number == 0
+						? "opacity-40 cursor-not-allowed"
+						: "cursor-pointer"
+				}
+			>
 				<img className='w-10' src='/images/arrow_back.svg' />
 			</div>
 			<div
 				ref={carousel_html}
-				className={`overflow-x-scroll h-full no-scrollbar scroll-smooth relative justify-center items-center grid grid-cols-[${renderColumnsStyle()}]`}
+				className={`overflow-x-scroll no-scrollbar h-full scroll-smooth relative grid`}
+				style={{
+					gridTemplateColumns: `repeat(${number_of_slides}, 100%)`,
+				}}
 			>
 				{children}
 			</div>
-			<div onClick={increaseSlideNumber}>
+			<div
+				onClick={increaseSlideNumber}
+				className={
+					current_slide_number + 1 == number_of_slides
+						? "opacity-40 cursor-not-allowed"
+						: "cursor-pointer"
+				}
+			>
 				<img className='rotate-180 w-10' src='/images/arrow_back.svg' />
 			</div>
 		</div>

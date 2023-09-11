@@ -3,8 +3,9 @@ import Button from "components/Button";
 import ProductTitle from "./product_title";
 import ExtraOptions from "../../components/ExtraOptions";
 import SizeOptions from "../../components/SizeOptions";
-import QuantityInput from "../../components/QuantityInput";
+import AmountInput from "../../components/QuantityInput";
 import PriceDisplayer from "components/PriceDisplayer";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 interface PropsProduct {
 	product: IProduct;
@@ -16,7 +17,7 @@ export default function Product({ product }: PropsProduct) {
 			className='w-full h-full grid grid-cols-[2fr_1fr] py-16 text-text-800'
 			key={product.id}
 		>
-			<div className='flex flex-col gap-2 justify-between'>
+			<div className='flex flex-col gap-4 justify-between'>
 				<ProductTitle
 					normal_name={product.normal_name}
 					special_name={product.special_name}
@@ -28,9 +29,15 @@ export default function Product({ product }: PropsProduct) {
 				</div>
 				<div className='grid grid-cols-2'>
 					<PriceDisplayer price={0} />
-					<QuantityInput />
+					<AmountInput />
 				</div>
-				<Button>ADD TO CART</Button>
+				<Button
+					className='w-1/2'
+					icon={faShoppingCart}
+					onClick={() => console.log("opa")}
+				>
+					ADD TO CART
+				</Button>
 			</div>
 			<div className='flex items-center justify-center'>
 				<img

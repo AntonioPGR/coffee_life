@@ -10,7 +10,13 @@ export default function Home() {
 			<PageTitle title='Home' />
 			<HeroText />
 			<HeroImages />
-			<Button icon={faArrowUp}> Order now </Button>
+			<Button
+				onClick={() => console.log("op")}
+				iconClassName='rotate-45'
+				icon={faArrowUp}
+			>
+				Order now
+			</Button>
 		</section>
 	);
 }
