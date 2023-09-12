@@ -1,6 +1,6 @@
 import { ProductsAPI } from "api/products_api";
 import PageTitle from "infra/PageTitle";
-import Product from "./product";
+import Product from "../patterns/products/product";
 import Carousel from "components/Carroussel";
 
 export const getServerSideProps = async () => {
