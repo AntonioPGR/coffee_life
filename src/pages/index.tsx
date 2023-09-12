@@ -14,6 +14,7 @@ export default function Home() {
 				onClick={() => console.log("op")}
 				iconClassName='rotate-45'
 				icon={faArrowUp}
+				button_animation
 			>
 				Order now
 			</Button>

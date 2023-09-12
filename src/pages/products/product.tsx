@@ -1,9 +1,9 @@
 // COMPONENTS
 import Button from "components/Button";
 import ProductTitle from "./product_title";
-import ExtraOptions from "../../components/ExtraOptions";
-import SizeOptions from "../../components/SizeOptions";
-import AmountInput from "../../components/QuantityInput";
+import ExtraOptions from "components/ExtraOptions";
+import SizeOptions from "components/SizeOptions";
+import AmountInput from "components/QuantityInput";
 import PriceDisplayer from "components/PriceDisplayer";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +14,7 @@ interface PropsProduct {
 export default function Product({ product }: PropsProduct) {
 	return (
 		<article
-			className='w-full h-full grid grid-cols-[2fr_1fr] py-16 text-text-800'
+			className='w-full h-full grid grid-cols-[2fr_1fr] py-16 text-text-800 gap-4'
 			key={product.id}
 		>
 			<div className='flex flex-col gap-4 justify-between'>
@@ -39,10 +39,11 @@ export default function Product({ product }: PropsProduct) {
 					ADD TO CART
 				</Button>
 			</div>
-			<div className='flex items-center justify-center'>
+			<div className='flex items-center justify-center w-full'>
 				<img
-					src='https://brandedcoffeecups.co.uk/wp-content/uploads/2020/11/DSC_3954-1_1C.png'
-					alt=''
+					className='w-full h-auto'
+					src={product.img.src}
+					alt={product.img.alt}
 				/>
 			</div>
 		</article>

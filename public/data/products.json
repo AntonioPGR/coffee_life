@@ -25,7 +25,11 @@
       }
     ],
     "extras": ["Cinnamon", "Chocolate", "Whipped Cream"],
-    "img": "insert_image_url_here"
+    "img": {
+      "src": "http://localhost:3000/images/products/expresso_bold_shot.png",
+      "alt": ""
+    } 
+    
   },
   {
     "id": 2,
@@ -53,7 +57,10 @@
       }
     ],
     "extras": ["Cinnamon", "Vanilla", "Caramel"],
-    "img": "insert_image_url_here"
+    "img": {
+      "src": "http://localhost:3000/images/products/cappucino_creamy_delight.webp",
+      "alt": ""
+    } 
   },
   {
     "id": 3,
@@ -81,7 +88,10 @@
       }
     ],
     "extras": ["Vanilla", "Caramel", "Hazelnut"],
-    "img": "insert_image_url_here"
+    "img": {
+      "src": "http://localhost:3000/images/products/latte_smooth_blend.webp",
+      "alt": ""
+    } 
   },
   {
     "id": 4,
@@ -109,7 +119,10 @@
       }
     ],
     "extras": ["Cinnamon", "Whipped Cream", "Caramel Drizzle"],
-    "img": "insert_image_url_here"
+    "img": {
+      "src": "http://localhost:3000/images/products/mocha_choco_bliss.png",
+      "alt": ""
+    } 
   },
   {
     "id": 5,
@@ -137,7 +150,10 @@
       }
     ],
     "extras": ["Vanilla", "Caramel", "Cinnamon"],
-    "img": "insert_image_url_here"
+    "img": {
+      "src": "http://localhost:3000/images/products/cold_brew_chill_vibes.webp",
+      "alt": ""
+    } 
   }
 ]
 
