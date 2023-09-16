@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 interface PropsCarousel extends PropsChildren, IPropsDefaultComponents {
@@ -51,7 +52,11 @@ export default function Carousel({
 						: "cursor-pointer"
 				}
 			>
-				<img className='w-10' src='/images/arrow_back.svg' />
+				<Image
+					alt='arrow pointing to left with the meaning of decrease'
+					className='w-10'
+					src='/images/arrow_back.svg'
+				/>
 			</div>
 			<div
 				ref={carousel_html}
@@ -70,7 +75,11 @@ export default function Carousel({
 						: "cursor-pointer"
 				}
 			>
-				<img className='rotate-180 w-10' src='/images/arrow_back.svg' />
+				<Image
+					alt='arrow pointing to left with the meaning of decrease'
+					className='rotate-180 w-10'
+					src='/images/arrow_back.svg'
+				/>
 			</div>
 		</div>
 	);

@@ -6,6 +6,7 @@ import SizeOptions from "components/SizeOptions";
 import AmountInput from "components/QuantityInput";
 import PriceDisplayer from "components/PriceDisplayer";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 interface PropsProduct {
 	product: IProduct;
@@ -40,7 +41,7 @@ export default function Product({ product }: PropsProduct) {
 				</Button>
 			</div>
 			<div className='flex items-center justify-center w-full'>
-				<img
+				<Image
 					className='w-full h-auto'
 					src={product.img.src}
 					alt={product.img.alt}

@@ -1,4 +1,4 @@
-export default function () {
+export default function Footer() {
 	return (
 		<footer className='text-center text-text-500 text-lg py-4'>
 			<a href='https://www.linkedin.com/in/AntonioPGR' target='_blank'>

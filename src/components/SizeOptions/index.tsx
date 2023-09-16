@@ -1,6 +1,7 @@
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Carousel from "components/Carroussel";
+import Image from "next/image";
 
 interface PropsProductExtras {
 	size_options: IProductSize[];
@@ -18,10 +19,10 @@ export default function SizeOptions({
 				<Carousel number_of_slides={size_options.length} start_slide={0}>
 					{size_options.map(size => (
 						<article key={size.tag}>
-							<img
+							<Image
 								className='max-h-40 h-full'
 								src='https://brandedcoffeecups.co.uk/wp-content/uploads/2020/11/DSC_3954-1_1C.png'
-								alt=''
+								alt='product image'
 							/>
 							<p>
 								{size.label} - {size.quantity}
